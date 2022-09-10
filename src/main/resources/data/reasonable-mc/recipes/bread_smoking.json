@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "reasonable-mc:fermented_dough"
+  },
+  "result": "minecraft:bread",
+  "experience": 0.35
+}

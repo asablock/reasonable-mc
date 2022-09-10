@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "reasonable-mc:noodles"
+  },
+  "result": "reasonable-mc:cooked_noodles",
+  "experience": 0.4
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "reasonable-mc:block/base_mortar_item",
+  "textures": {
+    "item": "minecraft:item/wheat"
+  }
+}

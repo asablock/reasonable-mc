@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#%#",
+    "%!%",
+    "#%#"
+  ],
+  "key": {
+    "#": {
+      "item": "reasonable-mc:void_essence"
+    },
+    "%": {
+      "item": "reasonable-mc:void_flower"
+    },
+    "!": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "reasonable-mc:black_hole"
+  }
+}

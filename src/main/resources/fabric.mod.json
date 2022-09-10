@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "reasonable-mc",
+  "version": "${version}",
+
+  "name": "Reasonable Minecraft",
+  "description": "Reasonable Minecraft",
+  "authors": [
+    "asablock"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/reasonable-mc/textures/gui/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.asablock.rmc.ReasonableMCMod"
+    ],
+    "client": [
+      "io.github.asablock.rmc.client.ClientReasonableMCMod"
+    ]
+  },
+  "mixins": [
+    "reasonable-mc.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": ">=0.37.1",
+    "minecraft": "1.16.5",
+    "java": ">=8"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

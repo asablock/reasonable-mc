@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "reasonable-mc:block/void_extractor_side_finished",
+    "end": "reasonable-mc:block/void_extractor_top"
+  }
+}

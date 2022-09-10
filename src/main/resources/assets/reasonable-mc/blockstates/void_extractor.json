@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "stage=finished": {
+      "model": "reasonable-mc:block/void_extractor_finished"
+    },
+    "stage=extracting": {
+      "model": "reasonable-mc:block/void_extractor"
+    },
+    "stage=failed": {
+      "model": "reasonable-mc:block/void_extractor_failed"
+    }
+  }
+}

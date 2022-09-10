@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PR#",
+    "RSR",
+    "#RP"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:obsidian"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "R": {
+      "item": "minecraft:wither_rose"
+    },
+    "P": [{
+      "item": "minecraft:iron_pickaxe"
+    }, {
+      "item": "minecraft:diamond_pickaxe"
+    }]
+  },
+  "result": {
+    "item": "reasonable-mc:void_extractor",
+    "count": 3
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "reasonable-mc:void_extractor",
+    "reasonable-mc:void_field",
+    "reasonable-mc:void_extraction_arm",
+    "reasonable-mc:black_hole"
+  ]
+}

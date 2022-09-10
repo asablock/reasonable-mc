@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "reasonable-mc:block/void_flower"
+  }
+}

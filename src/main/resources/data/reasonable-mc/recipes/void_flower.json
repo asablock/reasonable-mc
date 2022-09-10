@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#%#",
+    "%R%",
+    "#%#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:dragon_breath"
+    },
+    "%": {
+      "item": "reasonable-mc:void_essence"
+    },
+    "R": {
+      "item": "minecraft:wither_rose"
+    }
+  },
+  "result": {
+    "item": "reasonable-mc:void_flower",
+    "count": 2
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.asablock.rmc.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "AbstractFurnaceBlockEntityMixin",
+    "BlockInvoker",
+    "BlocksInvoker",
+    "CauldronBlockMixin",
+    "CropBlockInvoker",
+    "DefaultBiomeCreatorInvoker",
+    "FlintAndSteelItemMixin",
+    "ItemAccessor",
+    "ItemStackMixin",
+    "MixinBeehiveBlock",
+    "MixinBlockTags",
+    "MixinCraftingResultSlot",
+    "MixinEnderEyeItem",
+    "MixinEndPortalFrameBlock",
+    "MixinEntityTypeTags",
+    "MixinFletchingTable",
+    "MixinItem",
+    "MixinItems",
+    "MixinItemSettings",
+    "MixinPlayerEntity",
+    "MixinPotionItem",
+    "RecipeManagerMiixn",
+    "RegistryInvoker",
+    "TreeDecoratorTypeInvoker"
+  ],
+  "client": [
+    "MixinInGameHud"
+  ],
+  "server": [
+    "MixinLivingEntity",
+    "MixinServerPlayerEntity"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

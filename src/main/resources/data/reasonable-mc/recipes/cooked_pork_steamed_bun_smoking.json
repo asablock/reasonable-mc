@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "reasonable-mc:pork_steamed_bun"
+  },
+  "result": "reasonable-mc:cooked_pork_steamed_bun",
+  "experience": 0.35
+}

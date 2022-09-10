@@ -1,0 +1,18 @@
+{
+  "credit": "Made with Blockbench",
+  "elements": [
+    {
+      "from": [4, 1, 4],
+      "to": [12, 2, 12],
+      "color": 3,
+      "faces": {
+        "north": {"texture": "#item"},
+        "east": {"texture": "#item"},
+        "south": {"texture": "#item"},
+        "west": {"texture": "#item"},
+        "up": {"texture": "#item"},
+        "down": {"texture": "#item"}
+      }
+    }
+  ]
+}

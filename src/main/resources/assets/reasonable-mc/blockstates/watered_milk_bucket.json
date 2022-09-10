@@ -1,0 +1,29 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "reasonable-mc:block/base_bucket"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          { "stage": "0" },
+          { "stage": "1" },
+          { "stage": "2" }
+        ]
+      },
+      "apply": {
+        "model": "reasonable-mc:block/watered_milk"
+      }
+    },
+    {
+      "when": {
+        "stage": "3"
+      },
+      "apply": {
+        "model": "reasonable-mc:block/fermented_milk"
+      }
+    }
+  ]
+}

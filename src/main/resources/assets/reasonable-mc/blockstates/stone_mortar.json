@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "reasonable-mc:block/stone_mortar"
+      }
+    }
+  ]
+}

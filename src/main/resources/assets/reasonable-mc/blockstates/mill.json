@@ -1,0 +1,48 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "reasonable-mc:block/mill_bottom"
+      }
+    },
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": {
+        "model": "reasonable-mc:block/mill_top",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": {
+        "model": "reasonable-mc:block/mill_top",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": {
+        "model": "reasonable-mc:block/mill_top",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": {
+        "model": "reasonable-mc:block/mill_top",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "reasonable-mc:block/base_chopping_block_item",
+  "textures": {
+    "item": "minecraft:item/rotten_flesh"
+  }
+}
