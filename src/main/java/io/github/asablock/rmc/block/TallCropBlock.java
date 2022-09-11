@@ -17,9 +17,6 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-// A combination of TallPlantBlock and CropBlock
-// But Java doesn't support multi-extension
-// This prevents farmers
 public class TallCropBlock extends TallPlantBlock implements Fertilizable {
     public static final IntProperty AGE = Properties.AGE_2;
 
@@ -31,12 +28,20 @@ public class TallCropBlock extends TallPlantBlock implements Fertilizable {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         super.appendProperties(builder);
-        builder.add(AGE);
+        builder.add(getAgeProperty());
     }
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isOf(Blocks.FARMLAND);
+    }
+
+    public IntProperty getAgeProperty() {
+        return AGE;
+    }
+    
+    public int getMaxAge() {
+        return 2;
     }
 
     @Override
@@ -46,11 +51,11 @@ public class TallCropBlock extends TallPlantBlock implements Fertilizable {
 
     @Override
     public boolean hasRandomTicks(BlockState state) {
-        return state.get(HALF) == DoubleBlockHalf.LOWER && state.get(AGE) < 2;
+        return state.get(HALF) == DoubleBlockHalf.LOWER && state.get(AGE) < getMaxAge();
     }
 
-    public static boolean isMature(BlockState state) {
-        return state.get(AGE) >= 2;
+    public boolean isMature(BlockState state) {
+        return state.get(AGE) >= getMaxAge();
     }
 
     @Override
@@ -58,7 +63,7 @@ public class TallCropBlock extends TallPlantBlock implements Fertilizable {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (world.getBaseLightLevel(pos, 0) >= 9) {
             int i = state.get(AGE);
-            if (i < 2) {
+            if (i < getMaxAge()) {
                 float f = CropBlockInvoker.invokeGetAvailableMoisture(this, world, pos);
                 if (random.nextInt((int) (25.0F / f) + 1) == 0) {
                     growDouble(world, pos, state, i + 1);
@@ -98,8 +103,12 @@ public class TallCropBlock extends TallPlantBlock implements Fertilizable {
 
     @Override
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        int i = Math.min(state.get(AGE) + this.getGrowthAmount(world), 2);
+        if (state.get(HALF) == DoubleBlockHalf.UPPER) {
+            int i = Math.min(state.get(AGE) + this.getGrowthAmount(world), getMaxAge());
 
-        growDouble(world, pos, state, i);
+            growDouble(world, pos, state, i);
+        } else {
+            grow(world, random, pos.down(), world.getBlockState(pos));
+        }
     }
 }
